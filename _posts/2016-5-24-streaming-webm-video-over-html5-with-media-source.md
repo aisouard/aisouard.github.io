@@ -9,6 +9,7 @@ header:
   overlay_image: assets/images/posts/webm-streaming/webm-streaming-header.jpg
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
 date: 2016-05-24
+comments: true
 ---
 
 Back in the 2000's, playing videos on a web page was truly a mess. The audience
