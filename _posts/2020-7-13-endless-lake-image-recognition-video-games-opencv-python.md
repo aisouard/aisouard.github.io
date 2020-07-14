@@ -51,7 +51,7 @@ methods for simply doing this task.
 
 ## Using Chromium Embedded Framework
 
-This solution is the one I would recommend at a first glance. It consists of running a standalone process of the Google Chromium web browser and control it entirely.
+This solution is the one I would recommend at a first glance, using the [cefpython package](https://github.com/cztomczak/cefpython). It consists of running a standalone process of the Google Chromium web browser and control it entirely.
 
 ```python
 from cefpython3 import cefpython as cef
@@ -81,7 +81,7 @@ If you can manage to overcome these issues, then it would become the easiest sol
 
 ## Using Selenium
 
-My favorite option, with a native way to capture screenshots continuously using my Python package called [nativecap](https://github.com/aisouard/nativecap).
+My favorite option, a combination of the [selenium package](https://github.com/SeleniumHQ/selenium) with a native way to capture screenshots continuously using my Python package called [nativecap](https://github.com/aisouard/nativecap).
 
 ```python
 import nativecap
