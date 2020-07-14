@@ -38,7 +38,7 @@ these three factors:
 * Length of that same gap
 * Length of the next platform we'll land on
 
-![Overview](/assets/images/posts/endless-fake-1/overview.png)
+{% include figure image_path="/assets/images/posts/endless-fake-1/overview.png" alt="Project's overview" caption="Overview of our game analysis" %}
 
 All we need to do is retrieving these three values before passing them to our Machine Learning model so it can determine the best decision to take depending on these numbers.
 
@@ -113,7 +113,7 @@ Selenium is normally intended to be used as a functional testing tool for web de
 
 After taking a look at this image, we can notice a little shadow right under the character. Let's filter it with the OpenCV's `inRange` method, which takes the minimum and maximum RGB values as parameters.
 
-![Filtering shadows](/assets/images/posts/endless-fake-1/filter-shadows.png)
+{% include figure image_path="/assets/images/posts/endless-fake-1/filter-shadows.png" alt="Filtering the player's shadow" caption="Filtering the player's shadow" %}
 
 Now we can see exactly where our player is, but we also might encounter some cases where these same colors are used in unexpected places of the image, mostly in some situations where the player would be cloned multiple times.
 
@@ -129,7 +129,7 @@ cnts, _ = cv2.findContours(mask, cv2.RETR_TREE,
 filtered = list(filter(lambda c: cv2.contourArea(c) > 80.0, cnts))
 ```
 
-![Filtering shadows](/assets/images/posts/endless-fake-1/filter-shadows-2.png)
+{% include figure image_path="/assets/images/posts/endless-fake-1/filter-shadows-2.png" alt="Cleaning up by applying morphology and blurring techniques" caption="Cleaning up by applying morphology and blurring techniques" %}
 
 To make sure that we don't mistake a player's shadow for something else, I decided to retrieve the white pixels belonging to the player, draw a vertical line starting from the shadow directing to the top, then count the white pixels overlapping with that same line.
 
@@ -142,13 +142,13 @@ overlap = cv2.bitwise_and(line_mask, player_mask)
 return cv2.countNonZero(overlap) > 75
 ```
 
-![Filtering shadows](/assets/images/posts/endless-fake-1/filter-shadows-3.png)
+{% include figure image_path="/assets/images/posts/endless-fake-1/filter-shadows-3.png" alt="Confirming that the shadow actually belongs to our playing, by finding a sufficient amount of white pixels above" caption="Confirming that the shadow actually belongs to our playing, by finding a sufficient amount of white pixels above" %}
 
 # Determining the direction
 
 Before retrieving our first value, being the remaining distance to our next gap, we must determine our player's direction which could be left, right, or bottom.
 
-![Directions](/assets/images/posts/endless-fake-1/directions.png)
+{% include figure image_path="/assets/images/posts/endless-fake-1/directions.png" alt="Showing the player's possible directions: Left, Bottom, Right" caption="Showing the player's possible directions: Left, Bottom, Right" %}
 
 In the beginning, I've been struggling a lot by simply filtering the platform's pixels. That method ended up being very messy since we can encounter obstacles like some birds flying randomly over your path, or little arches obstructing our view.
 
@@ -159,7 +159,7 @@ left_mask = cv2.inRange([142, 177, 231], [169, 209, 255])
 right_mask = cv2.inRange([112, 146, 196], [148, 186, 234])
 ```
 
-![All edges](/assets/images/posts/endless-fake-1/all-edges.png)
+{% include figure image_path="/assets/images/posts/endless-fake-1/all-edges.png" alt="Retrieving all visible edges: Left direction in blue, Right direction in orange" caption="Retrieving all visible edges: Left direction in blue, Right direction in orange" %}
 
 That way, we can not only determine the player's direction but also the opposite edge defining the platform's end, where a jump would be required before falling into the lake.
 
@@ -181,7 +181,7 @@ left_overlap = cv2.bitwise_and(left_sample, left_mask)
 right_overlap = cv2.bitwise_and(right_sample, right_mask)
 ```
 
-![Determining the direction](/assets/images/posts/endless-fake-1/determining-direction.png)
+{% include figure image_path="/assets/images/posts/endless-fake-1/determining-direction.png" alt="Determining the player's direction by looking for the closest and longest edge" caption="Determining the player's direction by looking for the closest and longest edge" %}
 
 # Retrieving our values
 
@@ -212,7 +212,7 @@ def get_closest_edge(edge_mask, start):
 
 As for the gap's length, we can still draw a line from the player's position pointing to its direction until the end of the image, then see how many pixels are overlapping the platform's. That way we would obtain the next platform's length by overlapping on its inverted mask.
 
-![Getting the values](/assets/images/posts/endless-fake-1/getting-values.png)
+{% include figure image_path="/assets/images/posts/endless-fake-1/getting-values.png" alt="Retrieving the remaining values. Next platform's length will overlap the platform's mask. Gap's length will overlap the inverted one." caption="Retrieving the remaining values. Next platform's length will overlap the platform's mask. Gap's length will overlap the inverted one." %}
 
 # Wrapping Up
 
