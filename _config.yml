@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -68,6 +68,11 @@ bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
 
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
 # Social Sharing
 twitter:
   username               : aisouard
@@ -96,9 +101,11 @@ analytics:
 author:
   name             : "Axel Isouard"
   avatar           : "assets/images/bio-photo.jpg"
-  bio              : "Tech Enthusiast, Software Developer"
+  bio              : "Passionate and versatile software engineer, with great concern
+                      for the product's efficiency and security.
+                      <br/>
+                      Also coffee addict."
   location         : "Alicante, Spain"
-  email            : "axel@isouard.fr"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -115,6 +122,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/axl.is"
+    - label: "Strava"
+      icon: "fab fa-fw fa-strava orange"
+      url: "https://www.strava.com/athletes/51918519"
 
 # Site Footer
 footer:
@@ -137,6 +147,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/axl.is"
+    - label: "Strava"
+      icon: "fab fa-fw fa-strava orange"
+      url: "https://www.strava.com/athletes/51918519"
 
 
 # Reading Files

@@ -95,6 +95,30 @@
   }
 }
 
+.archive__item-teaser-squared {
+  position: relative;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+.archive__item-icon {
+  position: relative;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  margin-right: 16px;
+  float: left;
+  width: 25%;
+
+  img {
+    width: 100%;
+  }
+}
+
 .archive__item-caption {
   position: absolute;
   bottom: 0;

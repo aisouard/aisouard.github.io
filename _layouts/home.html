@@ -5,8 +5,6 @@ classes: wide
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
-
 {% if paginator %}
   {% assign posts = paginator.posts %}
 {% else %}
@@ -14,7 +12,7 @@ classes: wide
 {% endif %}
 
 {% for post in posts %}
-  {% include archive-single.html %}
+  {% include archive-single-list.html %}
 {% endfor %}
 
 {% include paginator.html %}
