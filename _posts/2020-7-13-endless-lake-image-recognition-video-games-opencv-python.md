@@ -8,6 +8,7 @@ header:
   overlay_image: /assets/images/posts/endless-fake-1/endless-lake-header.png
   overlay_filter: 0.5
 date: 2020-07-13
+comments: true
 ---
 
 A few months ago, a friend of mine challenged me to beat him on a video game called [Endless Lake](https://www.agame.com/game/endless-lake) on Facebook. It took me a long time to almost reach his high score manually like a human being.
