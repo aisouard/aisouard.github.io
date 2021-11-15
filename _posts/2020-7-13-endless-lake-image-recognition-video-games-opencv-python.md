@@ -1,6 +1,7 @@
 ---
 layout: single
-title: "Image Recognition in Video Games with Python and OpenCV"
+classes: wide
+title: "Image Recognition in Video Games with OpenCV"
 excerpt: "Building an Artificial Intelligence to beat the Endless Lake video game. Let's gather some data with the image recognition part with OpenCV and Python, before giving these to our future neural network!"
 header:
   image: /assets/images/posts/endless-fake-1/endless-lake-header.png

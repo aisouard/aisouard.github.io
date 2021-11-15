@@ -26,7 +26,7 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : aisouard/aisouard.github.io
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "Blog" # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "AXEL ISOUARD" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -107,31 +107,26 @@ analytics:
 author:
   name             : "Axel Isouard"
   avatar           : "assets/images/bio-photo.jpg"
-  bio              : "Passionate and versatile software engineer, with great concern
-                      for the product's efficiency and security.
-                      <br/>
-                      Also coffee addict."
+  bio              : "Passionate software engineer with great concern
+                      for efficiency and security."
   location         : "Alicante, Spain"
   email            : "axel@isouard.fr"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:axel@isouard.fr"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "http://axel.isouard.fr"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/aisouard"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/aisouard"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/axelisouard"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/aisouard"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/axl.is"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
     - label: "Strava"
       icon: "fab fa-fw fa-strava orange"
       url: "https://www.strava.com/athletes/51918519"
@@ -142,17 +137,14 @@ footer:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/aisouard"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/axelisouard"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/aisouard"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
