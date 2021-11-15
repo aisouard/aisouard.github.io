@@ -43,7 +43,7 @@
   }
 }
 
-.archive__item-title {
+.archive__item-title, .archive__item-listtitle {
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
   line-height: initial;
@@ -62,6 +62,44 @@
   a + a {
     opacity: 0.5;
   }
+}
+
+.archive__item-listtitle {
+  margin-top: 0;
+
+  a {
+    color: #fff;
+  }
+}
+
+.archive__item-wrapper, .archive__item-layer {
+  position: relative;
+  display: inline-block;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 240px;
+  margin-bottom: 8px;
+}
+
+.archive__item-layer {
+  position: absolute;
+  top: 0;
+}
+
+.archive__item-listcontent {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .40);
+  border-radius: 0 0 8px 8px;
+}
+
+.archive__item-date {
+  margin: 0;
+  color: #bdc1c4;
 }
 
 /* remove border*/
