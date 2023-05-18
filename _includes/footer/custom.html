@@ -2,7 +2,27 @@
 
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
-window.cookieconsent.initialise({
+var gaLoaded = false;
+function loadAnalytics(status) {
+  if (status !== "allow" || gaLoaded) {
+    return;
+  }
+
+  var gaScript = document.createElement('script');
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google.tracking_id }}';
+  gaScript.async = true;
+  document.head.appendChild(gaScript);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.analytics.google.tracking_id }}', { 'anonymize_ip': {{ site.analytics.google.anonymize_ip | default: false }}});
+
+  gaLoaded = true;
+}
+
+var cc = window.cookieconsent;
+cc.initialise({
   "palette": {
     "popup": {
       "background": "#edeff5",
@@ -12,7 +32,13 @@ window.cookieconsent.initialise({
       "background": "#4b81e8"
     }
   },
-  "type": "opt-out"
+  "type": "opt-out",
+  "onInitialise": function (status) {
+    loadAnalytics(status);
+  },
+  "onStatusChange": function (status) {
+    loadAnalytics(status);
+  },
 });
 </script>
 
