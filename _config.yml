@@ -30,7 +30,7 @@ masthead_title           : "AXEL ISOUARD" # overrides the website title displaye
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : disqus
+  provider               : giscus
   disqus:
     shortname            : aisouard
   discourse:
@@ -44,12 +44,12 @@ comments:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
   giscus:
-    repo_id              : # Shown during giscus setup at https://giscus.app
-    category_name        : # Full text name of the category
-    category_id          : # Shown during giscus setup at https://giscus.app
-    discussion_term      : # "pathname" (default), "url", "title", "og:title"
-    reactions_enabled    : # '1' for enabled (default), '0' for disabled
-    theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
+    repo_id              : MDEwOlJlcG9zaXRvcnk1OTMwNTE3Mw==
+    category_name        : General
+    category_id          : DIC_kwDOA4js1c4CWemT
+    discussion_term      : pathname
+    reactions_enabled    : 1
+    theme                : light
   staticman:
     branch               : # "master"
     endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
@@ -111,7 +111,6 @@ author:
   avatar           : "assets/images/bio-photo.jpg"
   bio              : "Passionate software engineer with great concern
                       for efficiency and safety."
-  location         : "Alicante, Spain"
   email            : "axel@isouard.fr"
   links:
     - label: "GitHub"
@@ -129,9 +128,6 @@ author:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: "Strava"
-      icon: "fab fa-fw fa-strava orange"
-      url: "https://www.strava.com/athletes/51918519"
 
 # Site Footer
 footer:
@@ -151,9 +147,6 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/axl.is"
-    - label: "Strava"
-      icon: "fab fa-fw fa-strava orange"
-      url: "https://www.strava.com/athletes/51918519"
 
 
 # Reading Files
