@@ -234,6 +234,11 @@ kind of data, such as a `Uint8Array` or a `Blob`.
 
 However, we still need to receive incoming data, and that won't be as simple as
 listening for a `message` event like we're used to with WebSockets. Instead, we
+need to use the `read()` method from the `readable` property.
+
+This method will return an object with two properties: one named `value`, which
+will contain the data received, and a boolean named `done`, which will be `true`
+when the stream is closed.
 
 ```js
 async function receiveDatagrams(transport) {
@@ -257,7 +262,7 @@ Now this can start to be confusing.
 
 This infinite loop will keep reading incoming data from the server until the
 stream is closed. But wouldn't it be more convenient just checking for a
-`message` event? Or call the blocking `read()`method only when some data is
+`message` event? Or call the blocking `read()` method only when some data is
 available?
 
 Well, there's a simple way to execute the function above:
