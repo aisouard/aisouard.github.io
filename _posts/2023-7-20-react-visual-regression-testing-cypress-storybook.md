@@ -8,7 +8,7 @@ header:
   overlay_image: /assets/images/posts/react-visual-regression-testing-cypress-storybook/header.jpg
   overlay_filter: 0.5
   og_image: /assets/images/posts/react-visual-regression-testing-cypress-storybook/og.png
-date: 2023-07-17
+date: 2023-07-20
 comments: true
 toc: true
 ---
